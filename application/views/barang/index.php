@@ -4,13 +4,28 @@
       <strong>Data Barang</strong> <?= $this->session->flashdata('flash'); ?>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-
   <?php endif; ?>
+
+  <?php if (empty($barang)) : ?>
+    <div class="alert alert-danger" role="alert">
+      Data Barang Tidak Ditemukan...
+    </div>
+  <?php endif; ?>
+
   <div class="row-mt-3">
     <div class="col md-6">
       <a href="" class="btn btn=primary">Tambah Data Barang</a>
     </div>
   </div>
+
+  <div class="row-mt-3">
+    <div class="col md-6">
+      <form action="input-group">
+        <input type="text" class="form-control" placeholder="Cari Data Barang..." name="keyword">
+        <button class="btn btn-primary" type="submit">Cari</button>
+    </div>
+  </div>
+  </form>
   <table class="table">
     <thead>
       <tr>

@@ -1,11 +1,11 @@
 <div class="container">
     <div class="row-mt-3">
         <div class="col-md-6">
-            <?php if (validation_errors()); ?>
-            <div class="alert alert-primary" role="alert">
-                <?php if (validation_errors()); ?>
-            </div>
-            <?php T_ENDIF ?>
+            <?php if (validation_errors()) : ?>
+                <div class="alert alert-primary" role="alert">
+                    <?php if (validation_errors()); ?>
+                </div>
+            <?php endif; ?>
             <form action="" method="post">
                 <div class="mb-3">
                     <label for="id_barang" class="form-label">Kode Barang</label>
