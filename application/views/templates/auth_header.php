@@ -20,4 +20,4 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="<?= base_url('assets/'); ?>bg-gradient-primary">
